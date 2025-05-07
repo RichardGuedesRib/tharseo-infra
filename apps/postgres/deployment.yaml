@@ -24,10 +24,10 @@ spec:
                 name: postgres-secret
           volumeMounts:
             - name: postgres-data
-              mountPath: /var/lib/postgresql/data/pgdata
+              mountPath: /var/lib/postgresql/pgdata
           env:
             - name: PGDATA
-              value: /var/lib/postgresql/data/pgdata
+              value: /var/lib/postgresql/pgdata/data  
       volumes:
         - name: postgres-data
           persistentVolumeClaim:
